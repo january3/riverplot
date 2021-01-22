@@ -280,7 +280,7 @@ join_nodes_at_pos <- function(x, p, dir="l") {
     if(is.null(tmp)) tmp <- FALSE ; tmp })
 
   sel <- sel & styles
-  if(!any(sel)) return; 
+  if(!any(sel)) return(x) 
   # else dmsgc("Found!\n")
 
   cons <- sapply(x$nodes$ID[sel], function(id) connections(x, id, dir=dir), simplify=TRUE)

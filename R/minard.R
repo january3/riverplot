@@ -1,6 +1,6 @@
-#' @name minard
-#' @title Minard Napoleon Russian campaign data
-#' @description The data set used by Charles Joseph Minard to generate the
+#' Minard Napoleon Russian campaign data
+#'
+#' The data set used by Charles Joseph Minard to generate the
 #' famous graph. The example below shows how to recreate the
 #' main panel of the graph using riverplot from the provided data.
 #' 
@@ -19,8 +19,6 @@
 #' are not shown, and the edges are straight (like in the original Minard
 #' plot) rather than curved.
 #'
-#' @docType data
-#' @usage minard
 #' @format Named list with two data frames: 
 #' \describe{
 #' \item{nodes}{data frame with geographic locations of the Napoleon army
@@ -28,9 +26,10 @@
 #' \item{edges}{connections between positions}
 #'}
 #' @source Charles Joseph Minard
+#' @rdname minard
 #' @examples
 #' # example how to convert data into a riverplot object
-#' data( minard )
+#' data(minard)
 #' nodes <- minard$nodes
 #' edges <- minard$edges
 #' colnames(nodes) <- c("ID", "x", "y")
@@ -60,14 +59,14 @@
 #'
 #' # add latitude and longitude
 #' abline(h=54:56, col="grey")
-#' label(u[1], 54:56, sprintf("%d°N", 54:56), pos="topright", bg=NA, col="grey", font=3)
+#' bglabel(u[1], 54:56, sprintf("%d°N", 54:56), pos="topright", bg=NA, col="grey", font=3)
 #' lbl <- seq(20, 40, by=5)
 #' abline(v=lbl, col="grey")
-#' label(lbl, u[3], sprintf("%d°E", lbl), pos="topright", bg=NA, col="grey", font=3)
+#' bglabel(lbl, u[3], sprintf("%d°E", lbl), pos="topright", bg=NA, col="grey", font=3)
 #' 
-#' # Add cities. Use "label()" to have a background frame and better
+#' # Add cities. Use "bglabel()" to have a background frame and better
 #' # positioning.
 #' with(minard$cities, points(Longitude, Latitude, pch=19))
-#' with(minard$cities, label(Longitude, Latitude, Name, pos="topright"))
+#' with(minard$cities, bglabel(Longitude, Latitude, Name, pos="topright"))
 #' @author January Weiner
-NULL
+"minard"

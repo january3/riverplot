@@ -350,7 +350,7 @@ checkriverplot <- function(x) {
   }
 
   if(is.null(x$nodes$ID)) x$nodes$ID <- paste0("N.", 1:nrow(x$nodes))
-  if(is.null(x$edges$ID)) x$edges$ID <- paste0("E.", 1:nrow(x$nodes))
+  if(is.null(x$edges$ID)) x$edges$ID <- paste0("E.", 1:nrow(x$edges))
 
   x$nodes$ID <- as.character(x$nodes$ID)
 

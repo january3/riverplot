@@ -209,7 +209,7 @@ draw.nodes <- function(x,
         pos.m[ "x", n ] + w, pos.m[ "top", n ], 
         lty=1, col="white")
 
-    if(debug) label(pos.m[ "x", n], pos.m["center",n], n, bg="white", border="black")
+    if(debug) bglabel(pos.m[ "x", n], pos.m["center",n], n, bg="white", border="black")
     else text(pos.m[ "x", n ], pos.m[ "center", n ], lab, col=.textcol, srt=.srt, pos=.textpos, cex=.textcex)
   }
   dmsgc("Done.\n")
